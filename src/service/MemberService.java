@@ -14,4 +14,10 @@ public class MemberService {
     public int saveMember(String loginId , String password , String name){
         return memberRepository.saveMember(loginId , password , name);
     }
+
+
+    public boolean isExistsByLoginId(String loginId){
+        return memberRepository.isExistsByLoginId(loginId);
+    }
+
 }
