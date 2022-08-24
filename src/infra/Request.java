@@ -24,7 +24,7 @@ public class Request {
         return uriParser.getTarget();
     }
 
-    public Object getParaneterValue(String key,Class cls){
+    public Object getParameterValue(String key,Class cls){
         Map<String  , Object> parameter = uriParser.getParameter();
         return cls.cast(parameter.get(key));
     }
