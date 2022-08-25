@@ -11,6 +11,8 @@ import java.util.Scanner;
 public class Container {
 
     public static Scanner sc;
+
+    public static Session session;
     public static SystemController systemController;
     public static MemberRepository memberRepository;
     public static MemberService memberService;
@@ -18,6 +20,7 @@ public class Container {
 
     static {
         sc = new Scanner(System.in);
+        session = new Session();
         systemController = new SystemController();
         memberRepository = new MemberRepository();
         memberService = new MemberService();
