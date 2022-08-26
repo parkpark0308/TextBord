@@ -51,8 +51,12 @@ public class Request  {
     }
 
     public boolean isValidRequest(){
-        return false;
+        return uriParser.isValid();
     }
+    public String getOriginUri(){
+        return uriParser.getURI();
+    }
+
 
     public String getControllerCode(){
         return uriParser.getControllerCode();
@@ -75,6 +79,13 @@ public class Request  {
     public String getParameterStrValue(String key){
         Map<String ,Object> parameter = uriParser.getParameter();
         return parameter.get(key).toString();
+    }
+
+    public boolean hasParam(String key){
+
+        Map<String , Object> parameter = uriParser.getParmeter();
+        return parameter.get(key) != null;
+
     }
 
 }
