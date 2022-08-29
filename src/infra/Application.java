@@ -1,10 +1,13 @@
 package infra;
 
+import controller.ArticleController;
 import controller.Controller;
+import data.Article;
 
 import java.util.Scanner;
 
 public class Application {
+
 
     private Scanner sc = Container.sc;
     private boolean isActive = true;
@@ -53,6 +56,9 @@ public class Application {
             case "members":
             case "member":
                 return Container.memberController;
+            case "articles":
+            case "article":
+                return Container.articleController;
             default:
                 return null;
         }

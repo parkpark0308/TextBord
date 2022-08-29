@@ -39,4 +39,13 @@ public class MemberRepository {
     public boolean isExistsByLoginId(String loginId) {
         return getMemberByLoginId(loginId) !=null;
     }
+
+    public void delete(Member member) {
+        store.remove(member);
+    }
+
+    public List<Member> getMembers() {
+        return store;
+
+    }
 }
