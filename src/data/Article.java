@@ -42,4 +42,14 @@ public class Article {
     public String getAuthor() {
         return author;
     }
+
+    public void setTitle(String newTitle) {
+        this.title = newTitle;
+    }
+
+    public void setBody(String newBody) {
+    }
+
+    public void setUpdateDate(LocalDateTime now) {
+    }
 }
