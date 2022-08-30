@@ -60,12 +60,12 @@ public class MemberController implements Controller{
         System.out.print("아이디 : ");
         String loginId = sc.nextLine().trim();
 
-        if(!memberService.isExistsByLoginId(loginId)){
+        if(memberService.isExistsByLoginId(loginId)){
             System.out.println("존재하지 않는 계정입니다");
             return;
         }
 
-        System.out.println("비밀번호 : ");
+        System.out.print("비밀번호 : ");
         String password = sc.nextLine().trim();
 
         if (memberService.isCorrectInfo(loginId , password)){
@@ -73,7 +73,7 @@ public class MemberController implements Controller{
             return;
         }
 
-        System.out.println("이름 : ");
+        System.out.print("이름 : ");
         String name = sc.nextLine().trim();
 
         int memberId = memberService.saveMember(loginId,password,name);

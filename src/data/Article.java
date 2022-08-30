@@ -14,6 +14,10 @@ public class Article {
     private LocalDateTime regDate = LocalDateTime.now();
     private LocalDateTime updateDate = LocalDateTime.now();
 
+    public LocalDateTime getRegDate() {
+        return regDate;
+    }
+
     public Article(int id , String title , String body , String author){
 
         this.id = id;
