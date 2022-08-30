@@ -7,6 +7,7 @@ import service.ArticleService;
 import utils.Util;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Scanner;
 
 public class ArticleController implements Controller{
@@ -32,6 +33,8 @@ public class ArticleController implements Controller{
                 break;
             case"modify":
                 modify(request);
+            case "list":
+                list();
             default :
                 System.out.println("존재하지 않는 요청입니다");
                 break;
@@ -155,6 +158,17 @@ public class ArticleController implements Controller{
         findArticle.setUpdateDate(LocalDateTime.now());
 
         System.out.println("성곡적으로 수정되었습니다");
+    }
+
+    public void list(){
+
+        List<Article> articles =articleService.getArticles();
+
+        System.out.println("==게시글 목록==");
+        System.out.println("작성자 | 제목");
+        for(Article article : articles){
+            System.out.println(article.getAuthor() + " | " +article.getTitle());
+        }
     }
 
 }

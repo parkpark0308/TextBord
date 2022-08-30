@@ -37,4 +37,7 @@ public class ArticleRepository {
     }
 
 
+    public List<Article> getArticles() {
+        return store;
+    }
 }

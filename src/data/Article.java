@@ -44,7 +44,7 @@ public class Article {
     }
 
     public void setTitle(String newTitle) {
-        this.title = newTitle;
+
     }
 
     public void setBody(String newBody) {
